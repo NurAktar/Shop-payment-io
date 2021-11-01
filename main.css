@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Poppins:wght@600&display=swap');
+*{
+  font-family:Ubuntu;
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+/* Track */
+::-webkit-scrollbar-track {
+
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(43, 47, 47);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #494f50;
+}
+
+ /* Code start here */
+ /* login page start here */
+ #userimg{
+   width:100px;
+   height:auto;
+ }
+.wrapper{
+  width:100vw;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+#login_form{
+  display:flex;
+  flex-direction:column;
+  font-size:13px;
+}
+#login_form input,button{
+  padding:7px;
+  width:245px;
+  margin:5px 0;
+  border-radius: 7px;
+}
+#login_form input{
+  outline: none;
+  border: 1px solid #4e4e4e;
+  font-family:Poppins;
+  font-size: 13px;
+  font-weight: 600;
+}
+#login_form button{
+  padding: 9px;
+  font-size: 15px;
+  border:1px solid #4e4e4e;
+  color:white;
+  background-color:#2e2e2e;
+  transition: 0.2s;
+  cursor: pointer;
+}
+#login_form button:hover{
+  border: 1px solid white;
+  background-color:#e86220;
+}
+#forgot{
+  cursor:pointer;
+}
+#forgot:hover{
+  color:red;
+}
+#login_page{
+  display:none;
+  cursor:pointer;
+}
+#login_page:hover{
+  color:green;
+}
+#reset{
+  display:none;
+}
+#login_form #reset:hover{
+    background-color:#e82020;
+}
+ /* login page over */
+/* main-content start here */
+.main-container{
+  display:none;
+}

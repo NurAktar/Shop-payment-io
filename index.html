@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bill Management</title>
+    <!-- all imports here -->
+    <link rel="stylesheet" href="main.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <!-- all imports over -->
+  </head>
+  <body>
+    <div class="wrapper">
+      <img id="userimg" src="userimg.png" alt="img">
+      <div id="login_form">
+        <label for="username">User</label>
+        <input id="email" placeholder="Email ID" type="text" >
+        <label id="pass_label" for="password">Password</label>
+        <input id="password" placeholder="Password" type="text" >
+        <div><span onclick="reset_page()" id="forgot">Reset Password?</span></div>
+        <div><span onclick="login_page()" id="login_page">Back to LogIn.</span></div>
+        <button id="login" onclick="login()" >Login</button>
+        <button id="reset" onclick="reset()" >Reset</button>
+      </div>
+    </div>
+
+    <div class="main-container">
+      hello world.
+    </div>
+    <!-- importing main js -->
+    <script src="main.js" charset="utf-8"></script>
+    <script src="firebase.js" charset="utf-8"></script>
+  </body>
+</html>
