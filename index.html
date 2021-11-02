@@ -15,14 +15,15 @@
     <div class="wrapper">
       <img id="userimg" src="userimg.png" alt="img">
       <div id="login_form">
-        <label for="username">User</label>
-        <input id="email" placeholder="Email ID" type="text" >
-        <label id="pass_label" for="password">Password</label>
-        <input id="password" placeholder="Password" type="text" >
+        <!-- <label for="username">User</label> -->
+        <input id="email" placeholder="Email ID" type="email">
+        <!-- <label id="pass_label" for="password">Password</label> -->
+        <input id="password" placeholder="Password" type="password">
         <div><span onclick="reset_page()" id="forgot">Reset Password?</span></div>
         <div><span onclick="login_page()" id="login_page">Back to LogIn.</span></div>
         <button id="login" onclick="login()" >Login</button>
         <button id="reset" onclick="reset()" >Reset</button>
+        <label id="msgid" style="text-align:center;opacity:0;color:red;transition:0.3s;">Message to be shown.</label>
       </div>
     </div>
 

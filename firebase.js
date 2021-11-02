@@ -18,7 +18,7 @@ firebase.auth().onAuthStateChanged((user) => {
     document.querySelector('.main-container').style.display="block";
   } else {
     // User is signed out
-    alert("not logged In");
+    // alert("not logged In");
   }
 });
 
@@ -32,9 +32,13 @@ function login(){
       // ...
     })
     .catch((error) => {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      alert(errorMessage);
+      // var errorCode = error.code;
+      // var errorMessage = error.message;
+      document.getElementById('msgid').innerText="Incorrect UserID or Password.";
+      document.getElementById('msgid').style.opacity='1';
+      setTimeout(function () {
+        document.getElementById('msgid').style.opacity='0';
+      }, 5000);
     });
 
 }
@@ -50,11 +54,21 @@ function reset(){
   firebase.auth().sendPasswordResetEmail(email)
   .then(() => {
     // Password reset email sent!
-    // ..
+    document.getElementById('msgid').innerText="Password reset email sent!.";
+    document.getElementById('msgid').style.opacity='1';
+    document.getElementById('msgid').style.color='green';
+    setTimeout(function () {
+      document.getElementById('msgid').style.opacity='0';
+      document.getElementById('msgid').style.color='red';
+    }, 5000);
   })
   .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ..
+    // var errorCode = error.code;
+    // var errorMessage = error.message;
+    document.getElementById('msgid').innerText="Invalid UserID.";
+    document.getElementById('msgid').style.opacity='1';
+    setTimeout(function () {
+      document.getElementById('msgid').style.opacity='0';
+    }, 5000);
   });
 }
