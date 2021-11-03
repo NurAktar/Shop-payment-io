@@ -29,14 +29,37 @@
    width:100px;
    height:auto;
  }
+ #bgdiv{
+   z-index:-1;
+   width:100%;
+   height:50%;
+   position:absolute;
+   top:0;
+ }
+ #bgdiv #svg_up{
+   background-color:#0075ff;
+   width:100%;
+   height:50%;
+ }
+ #bgdiv svg{
+
+ }
 .wrapper{
-  transition:1s;
+  background-image: url('/images/bgsmall.jpg');
+  background-size: cover;
+  background-position: 47% 50%;
   width:100vw;
   height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
+}
+.wrapper h3{
+  color:#173c4f;
+  width:100%;
+  text-align:center;
+  transform:translate(-60px,-20px);
 }
 #login_form{
   display:flex;
@@ -45,13 +68,14 @@
   text-align: right;
 }
 #login_form input{
+  background:transparent;
   padding:7px;
   width:245px;
   margin:9px 0;
   outline: none;
   border: none;
-  color:#606060;
-  border-bottom: 1px solid #bfbfbf;
+  color:#0a4a55;
+  border-bottom: 1px solid #9ff9f4;
   font-family:Ubuntu;
   font-size: 13px;
   font-weight: ;

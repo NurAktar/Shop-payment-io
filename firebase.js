@@ -19,6 +19,8 @@ firebase.auth().onAuthStateChanged((user) => {
   } else {
     // User is signed out
     // alert("not logged In");
+    document.querySelector('.wrapper').style.display="flex";
+    document.querySelector('.main-container').style.display="none";
   }
 });
 
@@ -45,6 +47,7 @@ function login(){
 function logout(){
   firebase.auth().signOut().then(() => {
   // Sign-out successful.
+
   }).catch((error) => {
     // An error happened.
   });
