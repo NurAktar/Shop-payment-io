@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Poppins:wght@400&display=swap');
+*{
+  font-family:Ubuntu;
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+/* Track */
+::-webkit-scrollbar-track {
+
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(43, 47, 47);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #494f50;
+}
+
+ /* Code start here */
+/* main-content start here */
+.main-container{
+
+}
+
+.footer{
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  width: 95vw;
+  margin:0 auto;
+  text-align:center;
+  color: white;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: rgba(0, 19, 9, 0.5);
+}

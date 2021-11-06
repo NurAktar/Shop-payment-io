@@ -2,9 +2,21 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>page 2</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   </head>
   <body>
-hello
+<h1>hello world page 2</h1>
+    <script src="fbase.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var fb_user = firebase.auth().currentUser.uid;
+    db.collection(fb_user).get().then((snapshot) =>{
+      snapshot.docs.forEach(doc =>{
+        console.log(doc.data().name);
+      })
+    });
+    </script>
   </body>
 </html>

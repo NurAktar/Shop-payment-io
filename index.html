@@ -5,41 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bill Management</title>
     <!-- all imports here -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="splashscreen.css">
+    <link rel="stylesheet" href="index.css">
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <!-- all imports over -->
   </head>
   <body>
-    <div class="wrapper">
-      <!-- <div id="bgdiv">
-        <div id="svg_up"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0075ff" fill-opacity="1" d="M0,192L60,165.3C120,139,240,85,360,96C480,107,600,181,720,218.7C840,256,960,256,1080,229.3C1200,203,1320,149,1380,122.7L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
-      </div> -->
-      <!-- <img id="userimg" src="userimg.png" alt="img"> -->
-      <h3>Welcome Back</h3>
-      <div id="login_form">
-        <!-- <label for="username">User</label> -->
-        <input id="email" placeholder="Email ID" type="email">
-        <!-- <label id="pass_label" for="password">Password</label> -->
-        <input id="password" placeholder="Password" type="password">
-        <div><span onclick="reset_page()" id="forgot">Reset Password?</span></div>
-        <div><span onclick="login_page()" id="login_page">Back to LogIn.</span></div>
-        <button id="login" onclick="login()" >Login</button>
-        <button id="reset" onclick="reset()" >Reset</button>
-        <label id="msgid" style="text-align:center;opacity:0;color:red;transition:0.3s;">Message to be shown.</label>
-      </div>
+    <div id="loadingtext">
+      <p>Loading Page</p>
+      <div class="bar"></div>
     </div>
-
     <div class="main-container">
       hello world.
       <input type="text" name="" value="">
+      <input id="date" type="date">
+      <input id="date2" type="date">
       <button type="button" onclick="loaddata()" name="button">laod</button>
       <button type="button" onclick="logout()">logout</button>
     </div>
-    <!-- importing main js -->
-    <script src="main.js" charset="utf-8"></script>
-    <script src="fbase.js" charset="utf-8"></script>
+    <div class="footer">
+      Nur Aktar
+    </div>
+    <!-- importing js -->
+    <script src="index.js" charset="utf-8"></script>
   </body>
 </html>

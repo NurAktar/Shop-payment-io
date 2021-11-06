@@ -2,19 +2,14 @@ var _0xa0fc=["\x41\x49\x7A\x61\x53\x79\x41\x33\x67\x6B\x50\x75\x55\x6E\x51\x42\x
 var _0xc4ee=["\x69\x6E\x69\x74\x69\x61\x6C\x69\x7A\x65\x41\x70\x70"];firebase[_0xc4ee[0]](firebaseConfig)
 // Initialized Firebase
 
-var db = firebase.firestore();
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    var uid = user.uid;
-    fb_user = firebase.auth().currentUser.uid;
+    // User is signed in
     // alert("LoggedIn");
-    document.querySelector('.wrapper').style.display="none";
-    document.querySelector('.main-container').style.display="block";
+    window.location.replace('/');
   } else {
     // User is signed out
     // alert("not logged In");
-    document.querySelector('.wrapper').style.display="flex";
-    document.querySelector('.main-container').style.display="none";
   }
 });
 
@@ -22,11 +17,6 @@ function login(){
   var email = document.querySelector("#email").value;
   var password = document.querySelector("#password").value;
   firebase.auth().signInWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      // Signed in
-      var user = userCredential.user;
-      // ...
-    })
     .catch((error) => {
       // var errorCode = error.code;
       // var errorMessage = error.message;
@@ -38,14 +28,7 @@ function login(){
     });
 
 }
-function logout(){
-  firebase.auth().signOut().then(() => {
-  // Sign-out successful.
-  fb_user = null;
-  }).catch((error) => {
-    // An error happened.
-  });
-}
+
 function reset(){
   var email = document.querySelector("#email").value;
   firebase.auth().sendPasswordResetEmail(email)
@@ -70,25 +53,18 @@ function reset(){
   });
 }
 
-
-//testloads
-
-function loaddata(){
-  var fb_user = firebase.auth().currentUser.uid;
-  console.log(fb_user);
-
-    // Add a new document in collection "cities"
-  db.collection(fb_user).doc("user101").set({
-      name: "customers no.12",
-      state: "canada",
-      country: "USA2",
-      bill: "500rs",
-      phone: "9292019401"
-  })
-  .then(() => {
-      console.log("Document successfully written!");
-  })
-  .catch((error) => {
-      console.error("Error writing document: ", error);
-  });
+function reset_page(){
+  document.getElementById('password').style.display="none";
+  document.getElementById('forgot').style.display="none";
+  document.getElementById('login').style.display="none";
+  document.getElementById('reset').style.display="block";
+  document.getElementById('login_page').style.display="block";
 }
+function login_page(){
+  document.getElementById('password').style.display="block";
+  document.getElementById('forgot').style.display="block";
+  document.getElementById('login').style.display="block";
+  document.getElementById('reset').style.display="none";
+  document.getElementById('login_page').style.display="none";
+}
+
