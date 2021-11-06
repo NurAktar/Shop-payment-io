@@ -6,7 +6,7 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     // User is signed in
     // alert("LoggedIn");
-    window.location.replace('/');
+    window.location.replace('/Shop-payment-io');
   } else {
     // User is signed out
     // alert("not logged In");
