@@ -9,7 +9,7 @@ firebase.auth().onAuthStateChanged((user) => {
   } else {
     // User is signed out
     // alert("not logged In");
-    window.location.replace('/login.html');
+    window.location.replace('/Shop-payment-io/login.html');
   }
 });
 var db = firebase.firestore();
